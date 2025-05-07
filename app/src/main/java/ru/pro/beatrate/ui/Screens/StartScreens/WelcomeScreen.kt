@@ -1,4 +1,4 @@
-package ru.pro.beatrate
+package ru.pro.beatrate.ui.Screens.StartScreens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -18,11 +18,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import ru.pro.beatrate.R
 
 @Composable
 fun WelcomeScreen(
-    onGetStartedClick: () -> Unit = {}
+    navController:NavController
 ) {
     // Используем BoxWithConstraints, чтобы динамически вычислить размер экрана для градиента
     BoxWithConstraints {
@@ -51,7 +52,7 @@ fun WelcomeScreen(
                     contentDescription = null,
                     modifier = Modifier
                         .weight(1f)
-                         // заставляем картинку занять доступное место по высоте
+                        // заставляем картинку занять доступное место по высоте
                         .fillMaxWidth(),
                     contentScale = ContentScale.Fit,
                     alignment = Alignment.Center
@@ -86,7 +87,7 @@ fun WelcomeScreen(
 
                         // Кнопка "Get Started" (#4682B4) - используем M3-параметр containerColor
                         Button(
-                            onClick = onGetStartedClick,
+                            onClick = {  },
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = Color(0xFF4682B4)
                             ),

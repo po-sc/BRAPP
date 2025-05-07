@@ -1,9 +1,11 @@
-package ru.pro.beatrate
+package ru.pro.beatrate.Activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.navigation.compose.rememberNavController
+import ru.pro.beatrate.Navigation.Navigation
 import ru.pro.beatrate.ui.theme.BeatRateRecAppointmentAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,8 +14,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BeatRateRecAppointmentAppTheme {
-                // Вызываем наш экран:
-                WelcomeScreen()
+                val navController = rememberNavController()
+                Navigation(navController)
             }
         }
     }
