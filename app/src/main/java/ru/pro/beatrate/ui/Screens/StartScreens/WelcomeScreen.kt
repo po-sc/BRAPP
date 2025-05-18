@@ -87,7 +87,7 @@ fun WelcomeScreen(
 
                         // Кнопка "Get Started" (#4682B4) - используем M3-параметр containerColor
                         Button(
-                            onClick = {  },
+                            onClick = { navController.navigate("LoginScreen") },
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = Color(0xFF4682B4)
                             ),
